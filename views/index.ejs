@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Express-Ejs Starter</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Mini Messageboard</title>
   </head>
   <body>
-    <h1>Hello <span>Engineer,</span></h1>
-    <p>
-      Welcome to <strong>Express-Ejs Starter</strong> built with 💕 by
-      <span
-        ><%= ENGINEER.name %>
-        - <a href="<%= ENGINEER.linkedin %>"><%= ENGINEER.username %></a></span
-      >
-    </p>
+    <h1><%= title %></h1>
+    <a href="/new">Add New Message</a>
+    <ul>
+      <% messages.forEach(({text, user, added}) => { %>
+      <li>
+        <p><%= text %> from <%= user %></p>
+        <p><%= added %></p>
+      </li>
+      <%})%>
+    </ul>
   </body>
 </html>
