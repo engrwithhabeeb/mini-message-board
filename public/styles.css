@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(33, 33, 85);
+  color: rgb(223, 209, 209);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 300px;
+  margin-top: 10px;
+}
+
+a {
+    color: rgb(158, 150, 150);
+}
