@@ -2,7 +2,7 @@
   "name": "express-ejs-starter",
   "version": "1.0.0",
   "description": "A pre-configured starter repository template for express with ejs projects with all dependencies required available with just \"npm install\"",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
