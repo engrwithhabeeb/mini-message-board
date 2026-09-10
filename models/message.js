@@ -1,4 +1,5 @@
-const messages = [
+const init = () => {
+  let messages = [
   {
     text: "Hi there!",
     user: "Amando",
@@ -12,15 +13,18 @@ const messages = [
 ];
 
 function getMessages() {
-  return messages;
+  return [...messages];
 }
 
 function addMessage(user, text) {
-  messages.push({
-    text,
-    user,
-    added: new Date(),
-  });
+  const added = new Date();
+  messages = [...messages, {user, text, added}];
 }
+
+return {getMessages, addMessage};
+
+};
+
+const {addMessage, getMessages} = init();
 
 module.exports = { addMessage, getMessages };
